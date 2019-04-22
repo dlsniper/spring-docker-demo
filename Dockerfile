@@ -7,7 +7,7 @@ FROM openjdk:12.0.1-jdk-oracle
 ENV GRADLE_HOME /opt/gradle
 ENV GRADLE_USER_HOME /home/deployer/.gradle
 ENV GRADLE_VERSION 5.4
-
+ENV DEBUG_APP false
 
 ARG GRADLE_DOWNLOAD_SHA256=c8c17574245ecee9ed7fe4f6b593b696d1692d1adbfef425bef9b333e3a0e8de
 RUN yum install -q -y wget unzip \
@@ -44,4 +44,4 @@ EXPOSE 8080
 COPY src ./src
 COPY build.gradle .
 
-CMD ["gradle", "-q", "bootRun"]
+CMD ["gradle", "-q", "-Dorg.gradle.debug=${DEBUG_APP}", "bootRun"]
