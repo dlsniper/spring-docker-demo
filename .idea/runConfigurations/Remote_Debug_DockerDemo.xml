@@ -12,7 +12,7 @@
       <option name="LOCAL" value="false" />
     </RunnerSettings>
     <method v="2">
-      <option name="com.intellij.docker.debug.DockerBeforeRunTask" run-config="Debug DockerDemo" />
+      <option name="com.intellij.docker.debug.DockerBeforeRunTask" run-config="Debug DockerDemo" healthcheck="true" />
     </method>
   </configuration>
 </component>

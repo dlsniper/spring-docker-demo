@@ -44,4 +44,4 @@ EXPOSE 8080
 COPY src ./src
 COPY build.gradle .
 
-CMD ["gradle", "-q", "-Dorg.gradle.debug=${DEBUG_APP}", "bootRun"]
+CMD ["gradle", "-q", "-Porg.gradle.project.debug=${DEBUG_APP}", "-Dorg.gradle.debug=${DEBUG_APP}", "bootRun"]
